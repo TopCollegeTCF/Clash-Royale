@@ -1,4 +1,4 @@
-1)Асадов Маджнун-spawn
+// 1)Асадов Маджнун-spawn
 // Функция для эффекта появления
 window.drawSpawnEffect = function(ctx, x, y) {
     // TODO: Расходящиеся круги
@@ -12,7 +12,10 @@ window.drawSpawnEffect = function(ctx, x, y) {
     }
 }
 ---------------------------------------------------------------------------------------------------------------
-    Тимофеев Семён
+
+
+
+    //Тимофеев Семён
     window.drawHitEffect = function(ctx, x, y) {
     
     ctx.fillStyle = '#ff0000';
