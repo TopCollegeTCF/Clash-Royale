@@ -1,4 +1,10 @@
-// CORE - основная игровая логика
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// CORE - основная игровая логика       core team - @lafneroo(Остапчук Андрей)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// инициализация
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 window.Core = {
     lastTime: 0,
     
@@ -10,7 +16,9 @@ window.Core = {
         this.lastTime = performance.now() / 1000;
         this.gameLoop();
     },
-    
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// размещение юнита 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     deployUnit: function(x, y) {
         const type = GameState.selectedUnit;
         const cost = CONFIG.GAME.units[type].cost;
@@ -43,7 +51,9 @@ window.Core = {
         
         return false;
     },
-    
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//  логика юнитов  
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     updateUnits: function(delta) {
         const units = GameState.getUnits();
         
@@ -147,7 +157,9 @@ window.Core = {
             QA.log('DEFEAT!');
         }
     },
-    
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//  игровой цикл
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     gameLoop: function() {
         const now = performance.now() / 1000;
         let delta = Math.min(0.033, now - this.lastTime);
