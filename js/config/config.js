@@ -82,6 +82,12 @@ window.CONFIG = {
             description: 'Мощная магическая атака',
             rarity: 'rare'
         }
+        SOUNDS: {
+    // ... существующие ...
+    cardSelect: 'assets/sounds/card-select.mp3',
+    insufficient: 'assets/sounds/error.mp3',
+    towerDestroyed: 'assets/sounds/tower-down.mp3'
+}
     }
 };
 //deploy.mp3'
